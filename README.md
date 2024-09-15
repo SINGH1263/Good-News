@@ -45,5 +45,7 @@ The goal of the project is to design a dynamic, responsive news website that del
 
  Conclusion
 This approach results in a fully functional, visually engaging, and user-friendly news website. The combination of API integration, modern design practices, and interactive UI elements ensures a seamless and enjoyable user experience, with easy access to the latest news and relevant categories. 
-
+ #RepoLink and Hosted Link:-
+Hosted Link:- https://singh1263.github.io/Good-News/  
+Repo Link:- https://github.com/SINGH1263/Good-News
  
