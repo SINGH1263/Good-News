@@ -1,6 +1,6 @@
-const apiKey = '61c551ab44c24ecd94362d1708041f29'; // Replace with your actual News API key
-const apiUrl = 'https://newsapi.org/v2/everything?q=';
-const breakingNewsUrl = `https://newsapi.org/v2/top-headlines?apiKey=${apiKey}&category=general&country=us`;
+const apiKey = 'aa8a1889df3d28e63cc1d541eeac24b9'; // Replace with your actual GNews API key
+const apiUrl = 'https://gnews.io/api/v4/search?q=';
+const breakingNewsUrl = `https://gnews.io/api/v4/top-headlines?token=${apiKey}&topic=breaking-news&lang=en`;
 
 // Fetch general news by default on page load
 window.onload = () => {
@@ -10,7 +10,7 @@ window.onload = () => {
 
 // Fetch news by category
 async function fetchNewsByCategory(category) {
-  const url = `https://newsapi.org/v2/top-headlines?apiKey=${apiKey}&category=${category}&country=us`;
+  const url = `https://gnews.io/api/v4/top-headlines?token=${apiKey}&topic=${category}&lang=en`;
 
   try {
     const response = await fetch(url);
@@ -42,7 +42,7 @@ async function searchNews() {
     return;
   }
 
-  const searchUrl = `${apiUrl}${encodeURIComponent(searchQuery)}&apiKey=${apiKey}&language=en`;
+  const searchUrl = `${apiUrl}${encodeURIComponent(searchQuery)}&token=${apiKey}&lang=en`;
 
   try {
     const response = await fetch(searchUrl);
@@ -77,7 +77,7 @@ function displayBreakingNews(articles) {
     // Display the first article as the main breaking news
     const mainBreakingNews = articles[0];
     const mainNewsHTML = `
-      <img src="${mainBreakingNews.urlToImage || 'https://via.placeholder.com/300'}" alt="News Image">
+      <img src="${mainBreakingNews.image || 'https://via.placeholder.com/300'}" alt="News Image">
       <h3>${mainBreakingNews.title}</h3>
       <p>${mainBreakingNews.description || 'No description available.'}</p>
       <a href="${mainBreakingNews.url}" target="_blank" class="news-card-link">Read more</a>
@@ -90,7 +90,7 @@ function displayBreakingNews(articles) {
       breakingNewsItem.classList.add('breaking-news-item');
 
       breakingNewsItem.innerHTML = `
-        <img src="${article.urlToImage || 'https://via.placeholder.com/300'}" alt="News Image">
+        <img src="${article.image || 'https://via.placeholder.com/300'}" alt="News Image">
         <h4>${article.title}</h4>
         <p>${article.description || 'No description available.'}</p>
         <a href="${article.url}" target="_blank" class="news-card-link">Read more</a>
