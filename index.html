@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Screenshot 2024-09-14 030155.png" alt="Company Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" onclick="fetchNewsByCategory('general')">General</a></li>
+        <li><a href="#" onclick="fetchNewsByCategory('business')">Business</a></li>
+        <li><a href="#" onclick="fetchNewsByCategory('technology')">Technology</a></li>
+        <li><a href="#" onclick="fetchNewsByCategory('sports')">Sports</a></li>
+        <li><a href="#" onclick="fetchNewsByCategory('entertainment')">Entertainment</a></li>
+      </ul>
+
+      <!-- Filter Icon for News Genres -->
+      <div class="filter-icon">
+        <img src="setting_9711268.png" alt="Filter Icon" onclick="toggleGenreFilter()">
+        <ul id="genre-filter" class="genre-filter">
+          <li><a href="#" onclick="fetchNewsByCategory('general')">General</a></li>
+          <li><a href="#" onclick="fetchNewsByCategory('business')">Business</a></li>
+          <li><a href="#" onclick="fetchNewsByCategory('technology')">Technology</a></li>
+          <li><a href="#" onclick="fetchNewsByCategory('sports')">Sports</a></li>
+          <li><a href="#" onclick="fetchNewsByCategory('entertainment')">Entertainment</a></li>
+        </ul>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search news...">
+        <button onclick="searchNews()">Search</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="news-layout">
+      <!-- 80% Breaking News Section -->
+      <div class="breaking-news-section">
+        <h2>Breaking News</h2>
+        <div id="main-breaking-news" class="main-breaking-news"></div>
+        <div id="breaking-news" class="breaking-news"></div>
+      </div>
+
+      <!-- 20% Top Headlines Section -->
+      <div class="top-headlines-section">
+        <h3>Top Headlines</h3>
+        <ul id="top-headlines" class="top-headlines-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="Screenshot 2024-09-14 030155.png" alt="News Logo">
+    </div>
+    <ul class="footer-nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">World</a></li>
+      <li><a href="#">Technology</a></li>
+      <li><a href="#">Sports</a></li>
+      <li><a href="#">Entertainment</a></li>
+    </ul>
+    <div class="footer-address">
+      <p>123 News Street, Media City</p>
+      <p>contact@econewsweb.com</p>
+      <div class="social-media-icons">
+        <a href="#"><img src="ig.jpeg" alt="Instagram"></a>
+        <a href="#"><img src="ximage.png" alt="Twitter"></a>
+        <a href="#"><img src="lin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
