@@ -44,4 +44,6 @@ The goal of the project is to design a dynamic, responsive news website that del
    - Responsive Design: Implemented a mobile-friendly design that adapts fluidly across different devices, ensuring accessibility for all users.
 
  Conclusion
-This approach results in a fully functional, visually engaging, and user-friendly news website. The combination of API integration, modern design practices, and interactive UI elements ensures a seamless and enjoyable user experience, with easy access to the latest news and relevant categories.
+This approach results in a fully functional, visually engaging, and user-friendly news website. The combination of API integration, modern design practices, and interactive UI elements ensures a seamless and enjoyable user experience, with easy access to the latest news and relevant categories. 
+
+ 
